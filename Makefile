@@ -1,6 +1,8 @@
 .PHONY: version
 version:
-	git tag $(V)
+	git tag $(V
+    ./scripts/size_tracker.sh
+    git add ./docs/sizelogs/SIZELOG_$(V).md
 	./scripts/changelog.sh
 	git add ./docs/changelogs/CHANGELOG_$(V).md
 	git commit --allow-empty -m "Build $(V)"
